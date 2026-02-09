@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guess Game - Kelompok 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="theme-toggle" class="theme-btn">☀️ / 🌙</button>
+
+    <div class="container">
+        <header>
+            <h1 class="glow-text">WORD GUESS GAME</h1>
+            <p class="subtitle">Hayo Ayo Tebak! – Dasar Pemrograman</p>
+        </header>
+
+        <div class="game-info">
+            <div class="info-box">
+                <span>Kategori:</span>
+                <span id="category-text" class="highlight">Loading...</span>
+            </div>
+            <div class="info-box">
+                <span>Skor:</span>
+                <span id="score-text">0</span>
+            </div>
+        </div>
+
+        <div class="lives-container">
+            <p>Sisa Kesempatan: <span id="lives-count">5</span></p>
+            <div class="progress-bar-bg">
+                <div id="lives-bar" class="progress-bar-fill"></div>
+            </div>
+        </div>
+
+        <main id="game-area">
+            <div id="word-display" class="word-container"></div>
+            
+            <div id="keyboard" class="keyboard-container"></div>
+        </main>
+
+        <div class="controls">
+            <button id="reset-btn" class="action-btn">🔄 Reset Game</button>
+        </div>
+    </div>
+
+    <div id="modal-win" class="modal hidden">
+        <div class="modal-content win-theme">
+            <h2 class="glow-text">🎉 SELAMAT! 🎉</h2>
+            <p>Kamu berhasil menebak kata tersebut!</p>
+            <div class="points-badge">+10 Poin</div>
+            
+            <hr>
+            <h3>Kelompok 4 Dasar Pemrograman</h3>
+            <ul class="member-list">
+                <li>1. Dafa Rizki (250511019)</li>
+                <li>2. Muhammad Reza Pahlevi Fairuz (250511029)</li>
+                <li>3. Rima Arya Syahreeza (250511105)</li>
+                <li>4. Rengga Ramdani Anggari (250511053)</li>
+                <li>5. Zain Akbar Mujahidan (250511097)</li>
+            </ul>
+            <button id="play-again-btn" class="modal-btn">Main Lagi</button>
+        </div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <div id="modal-lose" class="modal hidden">
+        <div class="modal-content lose-theme">
+            <h2>GAME OVER</h2>
+            <p>Jangan menyerah, coba lagi ya!</p>
+            <div class="correct-answer-box">
+                Jawaban Benar: <span id="correct-answer-text">...</span>
+            </div>
+            <button id="try-again-btn" class="modal-btn">Coba Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
